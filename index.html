@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Governance Landscape Study | Tanisha Katara</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #4b5563;
+            background: #fff;
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: #2563eb;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            padding: 4rem 0 3rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #111827;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .author {
+            font-size: 1rem;
+            color: #9ca3af;
+            margin-bottom: 3rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        section {
+            padding: 4rem 0;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #111827;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #111827;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .phase-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .phase-card h3 {
+            color: #2563eb;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .phase-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .phase-card li {
+            padding: 0.25rem 0;
+            font-size: 0.95rem;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pillar-card {
+            background: #f8fafc;
+            border-left: 4px solid;
+            padding: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .pillar-card.economic {
+            border-left-color: #7c3aed;
+        }
+
+        .pillar-card.operational {
+            border-left-color: #059669;
+        }
+
+        .pillar-card.protocol {
+            border-left-color: #d97706;
+        }
+
+        .pillar-card h4 {
+            color: #111827;
+            font-size: 1.125rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .pillar-card p {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        .voting-section {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .voting-section h4 {
+            color: #111827;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .voting-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .voting-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .voting-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+        }
+
+        .scoring-matrix {
+            overflow-x: auto;
+            margin-top: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid #e2e8f0;
+        }
+
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #111827;
+            font-size: 0.9rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+
+        .score-high {
+            background: #d1fae5;
+            color: #065f46;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .score-medium {
+            background: #fef3c7;
+            color: #92400e;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .score-low {
+            background: #fee2e2;
+            color: #991b1b;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .methodology-note {
+            background: #eff6ff;
+            border-left: 4px solid #2563eb;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            border-radius: 4px;
+        }
+
+        .stakeholder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stakeholder-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .stakeholder-card h4 {
+            color: #2563eb;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .stakeholder-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .stakeholder-card li {
+            padding: 0.4rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .stakeholder-card li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+        }
+
+        .protocol-comparison {
+            overflow-x: auto;
+            margin-top: 2rem;
+        }
+
+        .innovations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .innovation-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .innovation-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .innovation-card h4 {
+            color: #111827;
+            font-size: 1.125rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .innovation-card .example {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+
+        .innovation-card .status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #dbeafe;
+            color: #1e40af;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .case-study {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .case-study h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .case-study-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .case-stat {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .case-stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .deliverable-section {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .deliverable-section h3 {
+            color: #2563eb;
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .deliverable-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .deliverable-section li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .deliverable-section li:last-child {
+            border-bottom: none;
+        }
+
+        .deliverable-section li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #059669;
+            font-weight: 700;
+        }
+
+        .timeline-item {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .timeline-item:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        .timeline-item strong {
+            color: #111827;
+        }
+
+        footer {
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            padding: 2rem 0;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .image-container {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .image-caption {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 0.75rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .two-column,
+            .deliverables-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#methodology">Methodology</a>
+            <a href="#framework">Framework</a>
+            <a href="#analysis">Analysis</a>
+            <a href="#benchmarking">Benchmarking</a>
+            <a href="#innovations">Innovations</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Governance Landscape Study</h1>
+            <p class="subtitle">Comprehensive research mapping governance models, stakeholder needs, and future innovations across Web3 protocols</p>
+            <p class="author">Tanisha Katara | Senior Governance Consultant, Filecoin</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">23</span>
+                    <span class="stat-label">Stakeholder Interviews</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">557</span>
+                    <span class="stat-label">Community Votes</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">68</span>
+                    <span class="stat-label">APAC Survey Respondents</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">7</span>
+                    <span class="stat-label">Protocols Benchmarked</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">15</span>
+                    <span class="stat-label">Future Innovations</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Voting Models Evaluated</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Research Methodology -->
+        <section id="methodology">
+            <h2>Research Methodology</h2>
+            <p>A systematic four-phase approach combining qualitative and quantitative research methods to map the governance landscape and identify optimal frameworks for decentralized protocols.</p>
+
+            <div class="phase-grid">
+                <div class="phase-card">
+                    <h3>Discovery</h3>
+                    <ul>
+                        <li>23 stakeholder interviews across FIP editors, core developers, and implementers</li>
+                        <li>557 community votes analyzed for participation patterns</li>
+                        <li>68 APAC survey respondents providing regional insights</li>
+                        <li>Pain point identification and prioritization</li>
+                    </ul>
+                </div>
+
+                <div class="phase-card">
+                    <h3>Benchmarking</h3>
+                    <ul>
+                        <li>7 protocols analyzed (Filecoin, Ethereum, Polkadot, Optimism, Bittensor, NEAR, Glow)</li>
+                        <li>Voting taxonomy development (weighted vs unweighted models)</li>
+                        <li>Case studies of successful governance implementations</li>
+                        <li>Technical architecture review</li>
+                    </ul>
+                </div>
+
+                <div class="phase-card">
+                    <h3>Analysis</h3>
+                    <ul>
+                        <li>Scoring frameworks for voting model evaluation</li>
+                        <li>Stakeholder pain point severity mapping</li>
+                        <li>Future governance technology cataloging</li>
+                        <li>Pareto optimization analysis</li>
+                    </ul>
+                </div>
+
+                <div class="phase-card">
+                    <h3>Design</h3>
+                    <ul>
+                        <li>Three-pillar governance framework definition</li>
+                        <li>Implementation roadmap development</li>
+                        <li>Product requirements documentation</li>
+                        <li>Technical specification creation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Segmentation Framework -->
+        <section id="framework">
+            <h2>Governance Framework</h2>
+            <p>A comprehensive taxonomy organizing governance mechanisms into pillars and evaluating voting power distribution models.</p>
+
+            <div class="two-column">
+                <div>
+                    <h3>Governance Pillars</h3>
+                    <div class="pillar-card economic">
+                        <h4>Economic Governance</h4>
+                        <p>Incentives, funding mechanisms, rewards distribution, and mining reserve allocation. Governs the economic sustainability and growth of the protocol.</p>
+                    </div>
+                    <div class="pillar-card operational" style="margin-top: 1rem;">
+                        <h4>Operational Governance</h4>
+                        <p>FIP process management, coordination mechanisms, multisig operations, and network upgrades. Governs day-to-day protocol operations.</p>
+                    </div>
+                    <div class="pillar-card protocol" style="margin-top: 1rem;">
+                        <h4>Protocol Governance</h4>
+                        <p>Parameter changes, governance councils, voting contracts, and core protocol modifications. Governs fundamental protocol rules.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Voting Model Taxonomy</h3>
+                    <div class="voting-section">
+                        <h4>Unweighted Models</h4>
+                        <ul class="voting-list">
+                            <li><strong>Pure Token Voting:</strong> 1 token = 1 vote</li>
+                            <li><strong>Staked Voting:</strong> Only staked tokens count</li>
+                            <li><strong>Identity-Based:</strong> 1 person = 1 vote with verification</li>
+                        </ul>
+                    </div>
+
+                    <div class="voting-section" style="margin-top: 1rem;">
+                        <h4>Weighted Models</h4>
+                        <ul class="voting-list">
+                            <li><strong>Vote Escrow (veFIL):</strong> Time-locked tokens get more weight</li>
+                            <li><strong>Reputation-Based:</strong> Historical contributions factor in</li>
+                            <li><strong>Quadratic Voting:</strong> Cost increases quadratically</li>
+                            <li><strong>Representative:</strong> Delegation to elected representatives</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img src="images/governance-pillars.png" alt="Governance Pillars Framework" style="display: none;" onerror="this.style.display='none'">
+                <p class="image-caption">Three-pillar governance framework organizing decision-making across economic, operational, and protocol layers</p>
+            </div>
+        </section>
+
+        <!-- Scoring & Evaluation -->
+        <section id="analysis">
+            <h2>Scoring & Evaluation Framework</h2>
+            <p>Systematic evaluation of weighted voting models across six critical criteria, scored 1-5 on each dimension to identify optimal governance mechanisms.</p>
+
+            <div class="scoring-matrix">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Voting Model</th>
+                            <th>Pareto Optimality</th>
+                            <th>Inclusivity</th>
+                            <th>Collusion Resistance</th>
+                            <th>Sybil Resistance</th>
+                            <th>Implementation Complexity</th>
+                            <th>Fit for Filecoin</th>
+                            <th>Total Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Vote Escrow</strong></td>
+                            <td class="score-high">5</td>
+                            <td class="score-high">5</td>
+                            <td class="score-high">5</td>
+                            <td class="score-high">5</td>
+                            <td class="score-medium">4</td>
+                            <td class="score-high">8</td>
+                            <td class="score-high"><strong>32/40</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reputation-Based</strong></td>
+                            <td class="score-medium">4</td>
+                            <td class="score-medium">4</td>
+                            <td class="score-medium">4</td>
+                            <td class="score-medium">4</td>
+                            <td class="score-low">2</td>
+                            <td class="score-medium">6</td>
+                            <td class="score-medium"><strong>24/40</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Quadratic Voting</strong></td>
+                            <td class="score-high">5</td>
+                            <td class="score-high">5</td>
+                            <td class="score-medium">3</td>
+                            <td class="score-low">2</td>
+                            <td class="score-medium">3</td>
+                            <td class="score-medium">6</td>
+                            <td class="score-medium"><strong>24/40</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Representative</strong></td>
+                            <td class="score-medium">4</td>
+                            <td class="score-medium">3</td>
+                            <td class="score-medium">4</td>
+                            <td class="score-high">5</td>
+                            <td class="score-medium">4</td>
+                            <td class="score-medium">6</td>
+                            <td class="score-medium"><strong>26/40</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="methodology-note">
+                <strong>Scoring Methodology:</strong> Each criterion scored 1-5 (Low to High effectiveness). "Fit for Filecoin" weighted 0-10 to emphasize protocol-specific alignment. Vote Escrow emerged as the optimal model with highest total score of 32/40, balancing long-term alignment, sybil resistance, and implementation feasibility.
+            </div>
+
+            <div class="image-container">
+                <img src="images/scoring-matrix.png" alt="Voting Model Scoring Matrix" style="display: none;" onerror="this.style.display='none'">
+                <p class="image-caption">Comparative scoring analysis revealing Vote Escrow as the highest-rated governance mechanism</p>
+            </div>
+        </section>
+
+        <!-- Stakeholder Analysis -->
+        <section>
+            <h2>Stakeholder Pain Points</h2>
+            <p>Synthesized insights from 23 interviews identifying critical friction points across key stakeholder groups in the governance lifecycle.</p>
+
+            <div class="stakeholder-grid">
+                <div class="stakeholder-card">
+                    <h4>FIP Editors</h4>
+                    <ul>
+                        <li>High-stakes decisions without clear authority</li>
+                        <li>Unclear role boundaries and responsibilities</li>
+                        <li>Limited resources for proposal review</li>
+                        <li>No formal training or succession planning</li>
+                        <li>Burnout from volunteer workload</li>
+                    </ul>
+                </div>
+
+                <div class="stakeholder-card">
+                    <h4>Implementers</h4>
+                    <ul>
+                        <li>Unclear proposal lifecycle stages</li>
+                        <li>Low trust in governance outcomes</li>
+                        <li>Perceived centralization concerns</li>
+                        <li>Lack of visibility into prioritization</li>
+                        <li>Insufficient feedback loops</li>
+                    </ul>
+                </div>
+
+                <div class="stakeholder-card">
+                    <h4>Core Developers</h4>
+                    <ul>
+                        <li>No formal prioritization framework</li>
+                        <li>Lack of credit for governance work</li>
+                        <li>Unclear escalation mechanisms</li>
+                        <li>Technical debt from rushed implementations</li>
+                        <li>Limited say in roadmap direction</li>
+                    </ul>
+                </div>
+
+                <div class="stakeholder-card">
+                    <h4>Storage Providers</h4>
+                    <ul>
+                        <li>Low voting participation due to complexity</li>
+                        <li>Insufficient representation in decision-making</li>
+                        <li>Economic impacts not fully understood pre-vote</li>
+                        <li>Geographic barriers (APAC timezone challenges)</li>
+                        <li>Technical knowledge gaps for proposals</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img src="images/stakeholder-pain.png" alt="Stakeholder Pain Points Severity Map" style="display: none;" onerror="this.style.display='none'">
+                <p class="image-caption">Pain point severity and priority mapping across stakeholder groups</p>
+            </div>
+        </section>
+
+        <!-- Protocol Benchmarking -->
+        <section id="benchmarking">
+            <h2>Protocol Benchmarking</h2>
+            <p>Comparative analysis of governance models across seven leading Web3 protocols to identify applicable patterns and innovations for Filecoin.</p>
+
+            <div class="protocol-comparison">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Protocol</th>
+                            <th>Governance Model</th>
+                            <th>Key Innovation</th>
+                            <th>Filecoin Applicability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Polkadot</strong></td>
+                            <td>Track-based delegation with specialized councils</td>
+                            <td>Separate governance tracks for different proposal types</td>
+                            <td><span style="color: #059669;">✓ High</span> - Applicable for specialized working groups (economic, technical, operational)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Optimism</strong></td>
+                            <td>Bicameral (Token House + Citizens House)</td>
+                            <td>Dual-chamber system with checks and balances</td>
+                            <td><span style="color: #059669;">✓ High</span> - Model for separating economic vs protocol decisions</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ethereum</strong></td>
+                            <td>Off-chain signaling + EIP process</td>
+                            <td>Rough consensus with core developer coordination</td>
+                            <td><span style="color: #d97706;">~ Medium</span> - Current baseline; moving toward more formalized structure</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Curve Finance</strong></td>
+                            <td>Vote Escrow (veCRV) with gauge voting</td>
+                            <td>Time-locked voting power + liquidity incentive allocation</td>
+                            <td><span style="color: #059669;">✓ High</span> - Direct model for veFIL implementation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bittensor</strong></td>
+                            <td>Market-based subnet governance</td>
+                            <td>Stake-weighted voting with performance signals</td>
+                            <td><span style="color: #d97706;">~ Medium</span> - Insights for prediction markets and incentive alignment</td>
+                        </tr>
+                        <tr>
+                            <td><strong>NEAR</strong></td>
+                            <td>Delegation with AI-assisted tools</td>
+                            <td>Low-friction delegation + proposal summarization</td>
+                            <td><span style="color: #059669;">✓ High</span> - Tooling patterns for improving participation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Glow</strong></td>
+                            <td>Proof-of-work contribution voting</td>
+                            <td>Merit-based voting from protocol contributions</td>
+                            <td><span style="color: #d97706;">~ Medium</span> - Complementary to storage provider contributions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="image-container">
+                <img src="images/voting-agents.png" alt="Voting Agent Models Comparison" style="display: none;" onerror="this.style.display='none'">
+                <p class="image-caption">Comparison of single-body, dual-body, and multi-body governance structures across protocols</p>
+            </div>
+        </section>
+
+        <!-- Future Innovations Catalog -->
+        <section id="innovations">
+            <h2>Future Governance Innovations</h2>
+            <p>Catalog of 15 emerging governance mechanisms tracked across the Web3 ecosystem, evaluating potential applicability to Filecoin's governance evolution.</p>
+
+            <div class="innovations-grid">
+                <div class="innovation-card">
+                    <h4>Conviction Voting</h4>
+                    <p class="example"><strong>Examples:</strong> 1Hive, Commons Stack</p>
+                    <span class="status">Time-Weighted Signaling</span>
+                </div>
+
+                <div class="innovation-card">
+                    <h4>AI Governance Delegates</h4>
+                    <p class="example"><strong>Examples:</strong> NEAR, Arbitrum, ElizaOS</p>
+                    <span class="status">Automation</span>
+                </div>
+
+                <div class="innovation-card">
+                    <h4>Futarchy</h4>
+                    <p class="example"><strong>Examples:</strong> MetaDAO, Jito, Optimism experiments</p>
+                    <span class="status">Prediction Markets</span>
+                </div>
+
+                <div class="innovation-card">
+                    <h4>Vote Escrow (ve)</h4>
+                    <p class="example"><strong>Examples:</strong> Curve, Balancer, Frax</p>
+                    <span class="status">Time-Locking</span>
+                </div>
+
+                <div class="innovation-card">
+                    <h4>Quadratic Voting</h4>
+                    <p class="example"><strong>Examples:</strong> Gitcoin, Optimism RetroPGF</p>
+                    <span class="status">Preference Expression</span>
+                </div>
+
+                <div class="innovation-card">
+                    <h4>Holographic Consensus</h4>
+                    <p class="example"><strong>Examples:</strong> DAOstack</p>
+                    <span class="status">Prediction-Based</span>
+                </div>
+
+                <div class="innovation-card">
+                    <h4>Soulbound Tokens</h4>
+                    <p class="example"><strong>Examples:</strong> Gitcoin Passport, Ethereum Name Service</p>
+                    <span class="status">Identity & Reputation</span>
+                </div>
+
+                <div class="innovation-card">
+                    <h4>Rage Quit Mechanisms</h4>
+                    <p class="example"><strong>Examples:</strong> MolochDAO, Compound</p>
+                    <span class="status">Exit Rights</span>
+                </div>
+
+                <div class="innovation-card">
+                    <h4>Optimistic Governance</h4>
+                    <p class="example"><strong>Examples:</strong> Optimism, Compound</p>
+                    <span class="status">Veto-Based</span>
+                </div>
+
+                <div class="innovation-card">
+                    <h4>Bicameral Models</h4>
+                    <p class="example"><strong>Examples:</strong> Optimism, Lido</p>
+                    <span class="status">Dual-Chamber</span>
+                </div>
+
+                <div class="innovation-card">
+                    <h4>Gauge Voting</h4>
+                    <p class="example"><strong>Examples:</strong> Curve, Balancer</p>
+                    <span class="status">Incentive Allocation</span>
+                </div>
+
+                <div class="innovation-card">
+                    <h4>Multi-Sig + Social Recovery</h4>
+                    <p class="example"><strong>Examples:</strong> Gnosis Safe, Argent</p>
+                    <span class="status">Secure Operations</span>
+                </div>
+
+                <div class="innovation-card">
+                    <h4>Delegation with Incentives</h4>
+                    <p class="example"><strong>Examples:</strong> Gitcoin, Uniswap</p>
+                    <span class="status">Participation Rewards</span>
+                </div>
+
+                <div class="innovation-card">
+                    <h4>On-Chain Governance Minimization</h4>
+                    <p class="example"><strong>Examples:</strong> Bitcoin, Ethereum pre-merge</p>
+                    <span class="status">Social Consensus</span>
+                </div>
+
+                <div class="innovation-card">
+                    <h4>Treasury Diversification DAOs</h4>
+                    <p class="example"><strong>Examples:</strong> Maker, Uniswap</p>
+                    <span class="status">Financial Management</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Highlight -->
+        <section>
+            <h2>Case Study: Curve Finance</h2>
+
+            <div class="case-study">
+                <h3>Vote Escrow Success Metrics</h3>
+                <p style="margin-bottom: 2rem;">Curve Finance pioneered the vote escrow (ve) model, demonstrating remarkable long-term alignment and participation. Key learnings inform the veFIL implementation strategy.</p>
+
+                <div class="case-study-stats">
+                    <div class="case-stat">
+                        <span class="case-stat-number">65%</span>
+                        <span class="case-stat-label">of circulating CRV locked in governance</span>
+                    </div>
+                    <div class="case-stat">
+                        <span class="case-stat-number">38%</span>
+                        <span class="case-stat-label">average voting participation rate</span>
+                    </div>
+                    <div class="case-stat">
+                        <span class="case-stat-number">4 years</span>
+                        <span class="case-stat-label">maximum lock duration (most common choice)</span>
+                    </div>
+                    <div class="case-stat">
+                        <span class="case-stat-number">2.5x</span>
+                        <span class="case-stat-label">voting power multiplier for max lock</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="methodology-note" style="margin-top: 1.5rem;">
+                <strong>Key Takeaway:</strong> Curve's success demonstrates that vote escrow mechanisms effectively align incentives for long-term participation. Most voters voluntarily choose maximum lock periods when benefits (voting power, yield, governance influence) are properly structured. This informed Filecoin's veFIL design with similar time-weighting curves and incentive structures.
+            </div>
+
+            <div class="image-container">
+                <img src="images/curve-case-study.png" alt="Curve Finance Vote Escrow Data" style="display: none;" onerror="this.style.display='none'">
+                <p class="image-caption">Lock-up duration distribution and voting participation trends from Curve Finance governance</p>
+            </div>
+        </section>
+
+        <!-- Deliverables & Impact -->
+        <section>
+            <h2>Deliverables & Implementation</h2>
+            <p>Comprehensive governance framework translated into actionable specifications, stakeholder workshops, and a phased implementation roadmap.</p>
+
+            <div class="deliverables-grid">
+                <div class="deliverable-section">
+                    <h3>What Was Delivered</h3>
+                    <ul>
+                        <li>Governance framework document defining three-pillar structure</li>
+                        <li>Voting methodology recommendations with scoring matrices</li>
+                        <li>Technical implementation specifications for veFIL</li>
+                        <li>Stakeholder alignment workshops (FIP editors, core devs, SPs)</li>
+                        <li>Product requirements document for governance tooling</li>
+                        <li>Protocol benchmarking report (7 protocols analyzed)</li>
+                        <li>Community sentiment analysis from 557 votes + 68 surveys</li>
+                        <li>Pain point prioritization matrix</li>
+                    </ul>
+                </div>
+
+                <div class="deliverable-section">
+                    <h3>Implementation Timeline</h3>
+                    <div class="timeline-item">
+                        <strong>H1 2026:</strong> veFIL pilot launch, Technical Council multisig deployment
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Q2 2026:</strong> Community voting infrastructure, delegation mechanisms
+                    </div>
+                    <div class="timeline-item">
+                        <strong>H2 2026:</strong> Treasury governance rollout, economic pillar voting
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Q4 2026:</strong> Full three-pillar governance activation
+                    </div>
+                    <div class="timeline-item">
+                        <strong>2027:</strong> Advanced features (gauge voting, AI delegates, prediction markets)
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p><strong>Tanisha Katara</strong> | Senior Governance Consultant, Filecoin</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">This study was conducted in collaboration with Filecoin stakeholders. Research methodology and findings are presented for portfolio demonstration purposes. Specific participant identities and internal process details have been redacted to maintain confidentiality.</p>
+        </div>
+    </footer>
+</body>
+</html>
