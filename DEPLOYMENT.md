@@ -17,7 +17,7 @@ Your governance landscape portfolio is now live at:
 
 1. **Hero Section**
    - Headline and subtitle
-   - 6 key research metrics in stat cards
+   - 4 key research metrics in stat cards
    - Author credit
 
 2. **Research Methodology**
@@ -39,22 +39,13 @@ Your governance landscape portfolio is now live at:
    - 4 stakeholder groups analyzed
    - Pain points for FIP Editors, Implementers, Core Devs, Storage Providers
 
-6. **Protocol Benchmarking**
-   - 7 protocols compared
-   - Key innovations and Filecoin applicability ratings
-
-7. **Future Innovations Catalog**
+6. **Future Innovations Catalog**
    - 15 emerging governance mechanisms
    - Examples and categorization for each
 
-8. **Case Study: Curve Finance**
-   - Gradient background callout
-   - 4 key success metrics (65% locked, 38% participation, etc.)
-   - Implementation insights
-
-9. **Deliverables & Implementation**
-   - 8 deliverables listed
-   - Phased timeline (H1 2026 → 2027)
+7. **Deliverables**
+   - 7 key deliverables listed
+   - Research outputs and specifications
 
 10. **Footer**
     - Author credit and confidentiality disclaimer
@@ -79,15 +70,13 @@ Your governance landscape portfolio is now live at:
 
 The site is fully functional but currently shows placeholder captions where images should appear. To complete the visual presentation:
 
-### Priority Images to Add (6-8 total):
+### Priority Images to Add (4 total):
 
 Extract from **Constellation Program FDS7.pptx**:
 1. `governance-pillars.png` - Three-pillar framework diagram
 2. `scoring-matrix.png` - Voting model comparison table
 3. `voting-models.png` - Weighted vs unweighted comparison
 4. `stakeholder-pain.png` - Pain points severity chart
-5. `curve-case-study.png` - Lock-up and voting data
-6. `voting-agents.png` - Governance structure comparison
 
 Optional from **Notes & Structure Presentation.docx**:
 7. `community-sentiment.png` - Survey visualization
@@ -110,7 +99,7 @@ Optional from **Notes & Structure Presentation.docx**:
 ## 🔍 Quality Checks
 
 Before sharing the portfolio:
-- [ ] Extract and add 6-8 key images
+- [ ] Extract and add 4 key images
 - [ ] Verify all images display correctly on live site
 - [ ] Test responsive layout on mobile device
 - [ ] Check all nav anchor links work smoothly
@@ -120,11 +109,11 @@ Before sharing the portfolio:
 ## 📊 Portfolio Impact
 
 This showcase demonstrates:
-- **Research Rigor**: 23 interviews, 557 votes, 68 surveys, 7 protocols
+- **Research Rigor**: 23 interviews, 557 votes, 68 surveys
 - **Analytical Depth**: Scoring frameworks, comparative analysis, stakeholder mapping
 - **Framework Thinking**: Three-pillar structure, voting taxonomy, evaluation criteria
-- **Industry Expertise**: 15 innovations tracked, protocol benchmarking, case studies
-- **Execution Capability**: Deliverables, implementation timeline, product requirements
+- **Industry Expertise**: 15 innovations tracked, governance mechanism analysis
+- **Execution Capability**: Deliverables, specifications, product requirements
 
 **Target Audience**: Potential clients and Web3 practitioners seeking governance expertise
 

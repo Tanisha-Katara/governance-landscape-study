@@ -8,7 +8,6 @@ This static site presents a governance research study covering:
 - 23 stakeholder interviews
 - 557 community votes analyzed
 - 68 APAC survey respondents
-- 7 protocols benchmarked (Filecoin, Ethereum, Polkadot, Optimism, Bittensor, NEAR, Glow)
 - 15 future governance innovations catalogued
 - Comprehensive scoring frameworks and stakeholder analysis
 
@@ -21,9 +20,7 @@ governance-landscape-study/
 │   ├── governance-pillars.png
 │   ├── scoring-matrix.png
 │   ├── stakeholder-pain.png
-│   ├── voting-models.png
-│   ├── voting-agents.png
-│   └── curve-case-study.png
+│   └── voting-models.png
 └── README.md
 ```
 
@@ -36,12 +33,10 @@ Extract and add the following images from your source materials:
 2. **scoring-matrix.png** - Voting model scoring comparison table
 3. **voting-models.png** - Weighted vs unweighted voting comparison
 4. **stakeholder-pain.png** - Pain points severity visualization
-5. **curve-case-study.png** - Curve Finance lock-up and voting charts
-6. **voting-agents.png** - Single/dual/multi body governance comparison
 
 ### From Notes & Structure Presentation.docx:
-7. Community sentiment visualization
-8. Stakeholder demographics chart
+5. Community sentiment visualization
+6. Stakeholder demographics chart
 
 ## How to Add Images
 
@@ -112,10 +107,8 @@ Your site will be available at: `https://[username].github.io/governance-landsca
 3. **Governance Framework** - Pillars and voting taxonomy
 4. **Scoring & Evaluation** - Comparison matrices
 5. **Stakeholder Analysis** - Pain points mapping
-6. **Protocol Benchmarking** - 7 protocols compared
-7. **Future Innovations** - 15 emerging mechanisms
-8. **Case Study** - Curve Finance deep-dive
-9. **Deliverables** - Outputs and timeline
+6. **Future Innovations** - 15 emerging mechanisms
+7. **Deliverables** - Research outputs
 
 ## Author
 

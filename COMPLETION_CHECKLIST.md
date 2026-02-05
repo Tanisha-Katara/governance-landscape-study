@@ -4,15 +4,13 @@
 
 - [x] Create project directory structure
 - [x] Build comprehensive single-page HTML site
-  - [x] Hero with 6 key metrics
+  - [x] Hero with 4 key metrics
   - [x] Research methodology (4 phases)
   - [x] Governance framework (3 pillars + voting taxonomy)
   - [x] Scoring & evaluation matrix (4 models × 6 criteria)
   - [x] Stakeholder analysis (4 groups)
-  - [x] Protocol benchmarking (7 protocols)
   - [x] Future innovations catalog (15 mechanisms)
-  - [x] Curve Finance case study
-  - [x] Deliverables & timeline
+  - [x] Deliverables
   - [x] Professional footer
 - [x] Implement responsive design
   - [x] Sticky navigation
@@ -53,14 +51,6 @@ From **Constellation Program FDS7.pptx**:
 - [ ] `stakeholder-pain.png` - Pain points chart
   - Location: Slide with severity/priority visualization
   - Placement: Section 5 (Stakeholder Analysis)
-
-- [ ] `curve-case-study.png` - Lock-up data
-  - Location: Slide with Curve Finance statistics/charts
-  - Placement: Section 8 (Case Study)
-
-- [ ] `voting-agents.png` - Governance structures
-  - Location: Slide comparing single/dual/multi-body models
-  - Placement: Section 6 (Protocol Benchmarking)
 
 ### Optional Images:
 
@@ -113,18 +103,7 @@ git push origin master
 - [x] 23 stakeholder interviews
 - [x] 557 community votes
 - [x] 68 APAC survey respondents
-- [x] 7 protocols benchmarked
 - [x] 15 future innovations
-- [x] 6 voting models evaluated
-
-### Protocols Listed:
-- [x] Filecoin
-- [x] Ethereum
-- [x] Polkadot
-- [x] Optimism
-- [x] Bittensor
-- [x] NEAR
-- [x] Glow
 
 ### Governance Pillars:
 - [x] Economic (purple)

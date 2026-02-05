@@ -4,7 +4,7 @@ This directory should contain the following images extracted from your source ma
 
 ## Required Images
 
-### From "Constellation Program FDS7.pptx" (prioritize these):
+### From "Constellation Program FDS7.pptx":
 
 1. **governance-pillars.png**
    - The three-pillar framework diagram showing Economic, Operational, and Protocol governance
@@ -23,21 +23,12 @@ This directory should contain the following images extracted from your source ma
    - Pain points severity/priority visualization
    - Chart showing FIP Editors, Implementers, Core Devs, Storage Providers issues
 
-5. **curve-case-study.png**
-   - Curve Finance lock-up duration distribution
-   - Voting participation trends over time
-   - 65% locked, 38% participation visual data
+### From "Notes & Structure Presentation.docx" (optional):
 
-6. **voting-agents.png**
-   - Single body vs dual body vs multi-body governance comparison
-   - Framework diagram showing different governance structures
-
-### From "Notes & Structure Presentation.docx":
-
-7. **community-sentiment.png** (optional)
+5. **community-sentiment.png**
    - Community sentiment visualization from surveys
 
-8. **stakeholder-demographics.png** (optional)
+6. **stakeholder-demographics.png**
    - Geographic or role-based stakeholder breakdown
 
 ## How to Extract Images
@@ -91,4 +82,4 @@ The HTML is already configured to:
 - Include descriptive captions
 - Maintain responsive scaling on all devices
 
-**Next Step**: Extract and add the 6-8 key images listed above to make the portfolio visually complete.
+**Next Step**: Extract and add the 4 key images listed above to make the portfolio visually complete.
