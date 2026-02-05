@@ -541,7 +541,6 @@
             <a href="#methodology">Methodology</a>
             <a href="#framework">Framework</a>
             <a href="#analysis">Analysis</a>
-            <a href="#benchmarking">Benchmarking</a>
             <a href="#innovations">Innovations</a>
         </div>
     </nav>
@@ -567,16 +566,8 @@
                     <span class="stat-label">APAC Survey Respondents</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">7</span>
-                    <span class="stat-label">Protocols Benchmarked</span>
-                </div>
-                <div class="stat-card">
                     <span class="stat-number">15</span>
                     <span class="stat-label">Future Innovations</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">6</span>
-                    <span class="stat-label">Voting Models Evaluated</span>
                 </div>
             </div>
         </div>
@@ -600,9 +591,9 @@
                 <div class="phase-card">
                     <h3>Benchmarking</h3>
                     <ul>
-                        <li>7 protocols analyzed (Filecoin, Ethereum, Polkadot, Optimism, Bittensor, NEAR, Glow)</li>
+                        <li>Protocol governance model analysis and comparison</li>
                         <li>Voting taxonomy development (weighted vs unweighted models)</li>
-                        <li>Case studies of successful governance implementations</li>
+                        <li>Best practices identification across Web3 ecosystems</li>
                         <li>Technical architecture review</li>
                     </ul>
                 </div>
@@ -811,74 +802,6 @@
             </div>
         </section>
 
-        <!-- Protocol Benchmarking -->
-        <section id="benchmarking">
-            <h2>Protocol Benchmarking</h2>
-            <p>Comparative analysis of governance models across seven leading Web3 protocols to identify applicable patterns and innovations for Filecoin.</p>
-
-            <div class="protocol-comparison">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Protocol</th>
-                            <th>Governance Model</th>
-                            <th>Key Innovation</th>
-                            <th>Filecoin Applicability</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Polkadot</strong></td>
-                            <td>Track-based delegation with specialized councils</td>
-                            <td>Separate governance tracks for different proposal types</td>
-                            <td><span style="color: #059669;">✓ High</span> - Applicable for specialized working groups (economic, technical, operational)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Optimism</strong></td>
-                            <td>Bicameral (Token House + Citizens House)</td>
-                            <td>Dual-chamber system with checks and balances</td>
-                            <td><span style="color: #059669;">✓ High</span> - Model for separating economic vs protocol decisions</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Ethereum</strong></td>
-                            <td>Off-chain signaling + EIP process</td>
-                            <td>Rough consensus with core developer coordination</td>
-                            <td><span style="color: #d97706;">~ Medium</span> - Current baseline; moving toward more formalized structure</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Curve Finance</strong></td>
-                            <td>Vote Escrow (veCRV) with gauge voting</td>
-                            <td>Time-locked voting power + liquidity incentive allocation</td>
-                            <td><span style="color: #059669;">✓ High</span> - Direct model for veFIL implementation</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Bittensor</strong></td>
-                            <td>Market-based subnet governance</td>
-                            <td>Stake-weighted voting with performance signals</td>
-                            <td><span style="color: #d97706;">~ Medium</span> - Insights for prediction markets and incentive alignment</td>
-                        </tr>
-                        <tr>
-                            <td><strong>NEAR</strong></td>
-                            <td>Delegation with AI-assisted tools</td>
-                            <td>Low-friction delegation + proposal summarization</td>
-                            <td><span style="color: #059669;">✓ High</span> - Tooling patterns for improving participation</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Glow</strong></td>
-                            <td>Proof-of-work contribution voting</td>
-                            <td>Merit-based voting from protocol contributions</td>
-                            <td><span style="color: #d97706;">~ Medium</span> - Complementary to storage provider contributions</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="image-container">
-                <img src="images/voting-agents.png" alt="Voting Agent Models Comparison" style="display: none;" onerror="this.style.display='none'">
-                <p class="image-caption">Comparison of single-body, dual-body, and multi-body governance structures across protocols</p>
-            </div>
-        </section>
-
         <!-- Future Innovations Catalog -->
         <section id="innovations">
             <h2>Future Governance Innovations</h2>
@@ -977,50 +900,12 @@
             </div>
         </section>
 
-        <!-- Case Study Highlight -->
+        <!-- Deliverables -->
         <section>
-            <h2>Case Study: Curve Finance</h2>
+            <h2>Deliverables</h2>
+            <p>Comprehensive governance framework translated into actionable specifications and stakeholder workshops.</p>
 
-            <div class="case-study">
-                <h3>Vote Escrow Success Metrics</h3>
-                <p style="margin-bottom: 2rem;">Curve Finance pioneered the vote escrow (ve) model, demonstrating remarkable long-term alignment and participation. Key learnings inform the veFIL implementation strategy.</p>
-
-                <div class="case-study-stats">
-                    <div class="case-stat">
-                        <span class="case-stat-number">65%</span>
-                        <span class="case-stat-label">of circulating CRV locked in governance</span>
-                    </div>
-                    <div class="case-stat">
-                        <span class="case-stat-number">38%</span>
-                        <span class="case-stat-label">average voting participation rate</span>
-                    </div>
-                    <div class="case-stat">
-                        <span class="case-stat-number">4 years</span>
-                        <span class="case-stat-label">maximum lock duration (most common choice)</span>
-                    </div>
-                    <div class="case-stat">
-                        <span class="case-stat-number">2.5x</span>
-                        <span class="case-stat-label">voting power multiplier for max lock</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="methodology-note" style="margin-top: 1.5rem;">
-                <strong>Key Takeaway:</strong> Curve's success demonstrates that vote escrow mechanisms effectively align incentives for long-term participation. Most voters voluntarily choose maximum lock periods when benefits (voting power, yield, governance influence) are properly structured. This informed Filecoin's veFIL design with similar time-weighting curves and incentive structures.
-            </div>
-
-            <div class="image-container">
-                <img src="images/curve-case-study.png" alt="Curve Finance Vote Escrow Data" style="display: none;" onerror="this.style.display='none'">
-                <p class="image-caption">Lock-up duration distribution and voting participation trends from Curve Finance governance</p>
-            </div>
-        </section>
-
-        <!-- Deliverables & Impact -->
-        <section>
-            <h2>Deliverables & Implementation</h2>
-            <p>Comprehensive governance framework translated into actionable specifications, stakeholder workshops, and a phased implementation roadmap.</p>
-
-            <div class="deliverables-grid">
+            <div style="max-width: 600px;">
                 <div class="deliverable-section">
                     <h3>What Was Delivered</h3>
                     <ul>
@@ -1029,29 +914,9 @@
                         <li>Technical implementation specifications for veFIL</li>
                         <li>Stakeholder alignment workshops (FIP editors, core devs, SPs)</li>
                         <li>Product requirements document for governance tooling</li>
-                        <li>Protocol benchmarking report (7 protocols analyzed)</li>
                         <li>Community sentiment analysis from 557 votes + 68 surveys</li>
                         <li>Pain point prioritization matrix</li>
                     </ul>
-                </div>
-
-                <div class="deliverable-section">
-                    <h3>Implementation Timeline</h3>
-                    <div class="timeline-item">
-                        <strong>H1 2026:</strong> veFIL pilot launch, Technical Council multisig deployment
-                    </div>
-                    <div class="timeline-item">
-                        <strong>Q2 2026:</strong> Community voting infrastructure, delegation mechanisms
-                    </div>
-                    <div class="timeline-item">
-                        <strong>H2 2026:</strong> Treasury governance rollout, economic pillar voting
-                    </div>
-                    <div class="timeline-item">
-                        <strong>Q4 2026:</strong> Full three-pillar governance activation
-                    </div>
-                    <div class="timeline-item">
-                        <strong>2027:</strong> Advanced features (gauge voting, AI delegates, prediction markets)
-                    </div>
                 </div>
             </div>
         </section>
