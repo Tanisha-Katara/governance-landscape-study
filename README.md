@@ -1,5 +1,6 @@
 # Governance Landscape Study Portfolio
 
+🔗 **Live Site: [tanisha-katara.github.io/governance-landscape-study](https://tanisha-katara.github.io/governance-landscape-study/)**
 A comprehensive one-page portfolio showcase demonstrating governance landscape expertise through systematic research, analytical frameworks, and stakeholder analysis.
 
 ## Overview
